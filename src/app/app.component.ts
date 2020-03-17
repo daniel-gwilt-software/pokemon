@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent {
               '.png',
           });
         }
-        console.log(this.pokemon)
+        console.log(this.pokemon);
       });
   }
 }
