@@ -12,6 +12,10 @@ export class DetailsComponent implements OnInit {
 
   details;
 
+  lat = 32.713690;
+  long = -117.162240;
+  zoom = 14;
+
   private httpOptions;
 
   constructor(

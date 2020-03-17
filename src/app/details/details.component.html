@@ -7,7 +7,9 @@
         <img [src]="details.sprites.back_default">
       </mat-grid-tile>
       <mat-grid-tile>
-        
+        <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom">
+          <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+        </agm-map>
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-list>
