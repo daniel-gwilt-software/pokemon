@@ -14,11 +14,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
+import { ListComponent } from './list/list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent
+    DetailsComponent,
+    ListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
