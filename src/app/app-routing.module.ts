@@ -5,8 +5,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'details', component: DetailsComponent },
   { path: 'list', component: ListComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -1,3 +1,10 @@
-<p>
-  details works!
-</p>
+<mat-card *ngIf="details.name; else loading">
+  <mat-card-title>{{ details.name }}</mat-card-title>
+</mat-card>
+<ng-template #loading>
+  <p>
+    Loading...
+  </p>
+</ng-template>
+
+
