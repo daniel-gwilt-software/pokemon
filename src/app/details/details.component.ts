@@ -14,7 +14,7 @@ export class DetailsComponent implements OnInit {
 
   lat = 32.713690;
   long = -117.162240;
-  zoom = 14;
+  zoom = 10;
 
   private httpOptions;
 
@@ -42,6 +42,9 @@ export class DetailsComponent implements OnInit {
       this.http.get('https://api.craft-demo.net/pokemon/' + this.details.id,
           this.httpOptions)
         .subscribe((data: any) => {
+          for(let i=0; i < data.locations.length; i++) {
+            data.locations[i] = data.locations[i].split(',');
+          }
           this.details.locations = data.locations;
         });
       console.log('details: ', this.details);

@@ -8,7 +8,9 @@
       </mat-grid-tile>
       <mat-grid-tile>
         <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom">
-          <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+          <agm-marker *ngFor="let location of details.locations"
+            [latitude]="location[0]"
+            [longitude]="location[1]"></agm-marker>
         </agm-map>
       </mat-grid-tile>
       <mat-grid-tile>
