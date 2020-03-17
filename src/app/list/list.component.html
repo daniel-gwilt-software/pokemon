@@ -11,8 +11,9 @@
 
       <mat-grid-list cols="5">
         <mat-grid-tile *ngFor='let poke of pokemon'>
-          <img mat-card-image [src]="poke.image"
-          [alt]="poke.name">
+          <button mat-fab color="primary" [routerLink]="['/details', poke.id]">
+            <img mat-card-image [src]="poke.image" [alt]="poke.name">
+          </button>
           <mat-grid-tile-footer>{{ poke.id + ' - ' + poke.name }}</mat-grid-tile-footer>
         </mat-grid-tile>
       </mat-grid-list>
