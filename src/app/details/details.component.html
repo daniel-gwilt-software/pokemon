@@ -1,5 +1,37 @@
 <mat-card *ngIf="details.name; else loading">
-  <mat-card-title>{{ details.name }}</mat-card-title>
+  <mat-card-title>{{ details.id + ' - ' + details.name }}</mat-card-title>
+  <mat-card-content>
+    <mat-grid-list cols="2">
+      <mat-grid-tile>
+        <img [src]="details.sprites.front_default">
+        <img [src]="details.sprites.back_default">
+      </mat-grid-tile>
+      <mat-grid-tile>
+        
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-list>
+          <mat-list-item> Height: {{ details.height }} </mat-list-item>
+          <mat-list-item> Weight: {{ details.weight}} </mat-list-item>
+          <mat-list-item> <mat-checkbox>In Bag</mat-checkbox> </mat-list-item>
+          <mat-list-item>
+            Type: {{ details.types[1].type.name }} {{ details.types[0].type.name }}
+          </mat-list-item>
+          <mat-list-item>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </mat-list-item>
+         </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Abilities</mat-grid-tile-header>
+        <mat-list>
+          <mat-list-item *ngFor="let ability of details.abilities">
+            {{ ability.ability.name }}
+          </mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
 </mat-card>
 <ng-template #loading>
   <p>

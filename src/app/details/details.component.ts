@@ -24,6 +24,7 @@ export class DetailsComponent implements OnInit {
       )
     ).subscribe(results => {
       this.details = results;
+      this.details.name = this.details.name.replace(/^\w/, c => c.toUpperCase());
       console.log('details: ', this.details);
     });
   }
